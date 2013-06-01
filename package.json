@@ -1,0 +1,13 @@
+{
+  "name": "node-uitzendinggemist",
+  "version": "0.0.1",
+  "author": "Bas van der Heijden <info@citroenboom.com>",
+  "scripts": {},
+  "main": "",
+  "bin": {},
+  "dependencies": {
+    "request": "~2.21.0",
+    "xml2js": "~0.2.7"
+  },
+  "devDependencies": {}
+}
