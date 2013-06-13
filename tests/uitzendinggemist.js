@@ -18,5 +18,14 @@ module.exports = exports = {
       test.ok(url.match(regex), 'URL should match the regex.');
       test.done();
     });
+  },
+
+  UitzendingGemistOld: function(test) {
+    test.expect(1);
+
+    var u = new UitzendingGemist(1138977, function(url) {
+      test.ok(url && url.length, 'URL should not be empty');
+      test.done();
+    });
   }
 };
