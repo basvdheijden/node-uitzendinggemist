@@ -20,6 +20,16 @@ module.exports = exports = {
     });
   },
 
+  UitzendingGemistNOS: function(test) {
+    test.expect(1);
+
+    var regex = /^http:\/\/odi.omroep.nl\/video\/embedplayer\/(.+)\/(.+)\//;
+    var u = new UitzendingGemist(1375935, function(url) {
+      test.ok(url.match(regex), 'URL should match the regex.');
+      test.done();
+    });
+  },
+
   UitzendingGemistOld: function(test) {
     test.expect(1);
 
