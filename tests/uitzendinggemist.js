@@ -12,8 +12,7 @@ module.exports = exports = {
   UitzendingGemist: function(test) {
     test.expect(1);
 
-    var regex = /^http:\/\/odi.omroep.nl\/video\/embedplayer\/(.+)\/(.+)\//;
-
+    var regex = /urishieldv2/;
     var u = new UitzendingGemist(1348184, function(url) {
       test.ok(url.match(regex), 'URL should match the regex.');
       test.done();
@@ -23,18 +22,19 @@ module.exports = exports = {
   UitzendingGemistNOS: function(test) {
     test.expect(1);
 
-    var regex = /^http:\/\/odi.omroep.nl\/video\/embedplayer\/(.+)\/(.+)\//;
+    var regex = /urishieldv2/;
     var u = new UitzendingGemist(1375935, function(url) {
       test.ok(url.match(regex), 'URL should match the regex.');
       test.done();
     });
   },
 
-  UitzendingGemistOld: function(test) {
+  uitzendingGemistRandomTry: function(test) {
     test.expect(1);
 
-    var u = new UitzendingGemist(1138977, function(url) {
-      test.ok(url && url.length, 'URL should not be empty');
+    var regex = /urishieldv2/;
+    var u = new UitzendingGemist(1375820, function(url) {
+      test.ok(url.match(regex), 'URL should match the regex.');
       test.done();
     });
   }
